@@ -1,0 +1,307 @@
+\documentclass[a0paper,portrait]{baposter}
+
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{multirow}
+
+% =================================
+% Colors
+\selectcolormodel{RGB}
+\definecolor{aaublue1}{RGB}{176,196,222}    % light blue
+\definecolor{aaublue2}{RGB}{110,110,140}    % darker blue
+\definecolor{aaublue3}{RGB}{240,240,240}
+\definecolor{aaublue4}{RGB}{10,80,10}
+\definecolor{darkblue}{RGB}{0,0,150}
+
+% =================================
+% Misc
+\addto{\captionsenglish}{
+  \renewcommand{\refname}{\vspace{-0.7em}}  %remove the title of the bibliograhpy
+  \renewcommand{\figurename}{\textcolor{aaublue4}{Fig.}}  %change Figure to Fig. in figure captions
+  \renewcommand{\tablename}{\textcolor{aaublue4}{Table}}  %change Figure to Fig. in figure captions
+  \renewcommand{\thetable}{\textcolor{aaublue4}{\Roman{table}}}
+  \renewcommand{\thefigure}{\textcolor{aaublue4}{\arabic{figure}}}
+  \captionsetup[table]{labelfont=footnotesize, font=footnotesize,  labelsep=period, singlelinecheck=true}
+  \captionsetup[figure]{labelfont=footnotesize, font=footnotesize, labelsep=period, singlelinecheck=true}
+}
+
+
+% Reduce space before and after equations
+%\addtolength{\abovedisplayskip}{-2mm}
+%\addtolength{\belowdisplayskip}{-2mm}
+
+
+\begin{document}
+
+% =================================
+% Set the background of the poster
+\background{
+	\begin{tikzpicture}[remember picture,overlay]
+      		\fill[fill=aaublue3] (current page.north west) rectangle (current page.south east); 
+   		 \fill [fill=aaublue1] (current page.north west) rectangle ([yshift=-\headerheight] current page.north east);
+	\end{tikzpicture}
+}
+
+
+% =================================
+% General poster setup
+\begin{poster}{
+  grid=false,
+  columns=3,
+  colspacing=4mm,
+  headerheight=0.1\textheight,
+  background=user,
+  eyecatcher=true,
+  headerborder=closed,
+  borderColor=aaublue2,
+  headershape=rounded,
+  headershade=plain,
+  headerColorOne=aaublue1,
+  textborder= rounded,
+  boxshade=plain,
+  boxColorOne=white,
+  headerFontColor=black,
+  headerfont=\Large\sf\bf,
+  linewidth=1pt
+}
+% Logos (left)
+{
+  \begin{tabular}{c}
+  \includegraphics[height=0.4\headerheight]{Figures/Placeholder.png} \\
+  \includegraphics[height=0.4\headerheight]{Figures/Placeholder.png}
+  \end{tabular}
+}
+% Title, authors, institutions
+{
+\bf\LARGE{Title goes here}
+}
+%
+{\vspace{0.6em}
+  \large{D. Hellfeld\textsuperscript{1}, J. Smith\textsuperscript{2}, J. Doe\textsuperscript{2}} \\[0.4em]
+
+  \small{\textsuperscript{1}Department of Nuclear Engineering, University of California, Berkeley, Berkeley, CA 94720 USA \\[-0.2em]
+             \textsuperscript{2}Affiliation, City, State Zip Country \\[-0.2em]}
+}
+% Logos (right)
+{
+  \begin{tabular}{c}
+  \includegraphics[height=0.4\headerheight]{Figures/Placeholder.png} \\
+  \includegraphics[height=0.4\headerheight]{Figures/Placeholder.png}
+  \end{tabular}
+}
+
+
+% =================================
+% Border line
+\begin{posterbox}[name=blah,column=0,span=3, headerColorOne=aaublue3, borderColor=aaublue3, boxColorOne=aaublue3, boxheaderheight=-1em]{}
+
+\vspace{-2.5ex}
+\textcolor{aaublue2}{\noindent\makebox[\linewidth]{\rule{60cm}{1pt}}}
+
+\end{posterbox}
+
+
+
+
+% =================================
+% Box 1
+\begin{posterbox}[name=box1,column=0,row=0, span=3, height=0.097]{Box 1}
+
+Text goes here.
+
+\end{posterbox}
+
+
+
+% =================================
+% Box 2
+\begin{posterbox}[name=box2,column=0,below=box1, height=0.315]{Box 2}
+
+Text goes here. 
+
+\begin{center}
+	\setlength{\tabcolsep}{2pt}
+	\begin{tabular}{cc}
+		\includegraphics[height=0.36\textwidth, width=0.48\textwidth]{Figures/Placeholder.png}  &
+		\includegraphics[height=0.36\textwidth, width=0.48\textwidth]{Figures/Placeholder.png} \\ [-1ex]
+		\scriptsize{(a)} & \scriptsize{(b)}
+	\end{tabular}
+	\vspace{-5pt}
+	\captionof{figure}{\textcolor{aaublue4}{Figure caption goes here.}}
+	\label{fig:figlabel}
+\end{center}
+
+\begin{wrapfigure}{R}{0.52\textwidth}
+	\centering
+	\vspace{-24pt}
+  	\includegraphics[width=0.47\textwidth]{Figures/Placeholder.png}
+	\vspace{-2pt}
+	\captionof{figure}{\textcolor{aaublue4}{Figure caption here.}}
+	\label{fig:figlabel}
+\end{wrapfigure}
+
+\vspace{10pt}
+
+Text goes here.
+
+\end{posterbox}
+
+
+
+
+% =================================
+% Box 3
+\begin{posterbox}[name=box3,column=1,below=box1, height=0.315]{Box 3}
+
+Text goes here.
+
+\begin{center}
+  	\includegraphics[height=0.5\textwidth]{Figures/Placeholder.png}
+	\vspace{-4pt}
+	\captionof{figure}{\textcolor{aaublue4}{Figure caption goes here.}}
+	\label{fig:figlabel}
+\end{center}
+
+\vspace{1.7ex}
+
+Text goes here [1].
+
+\end{posterbox}
+
+
+
+
+
+% =================================
+% Box 4
+% =================================
+\begin{posterbox}[name=box4,column=2,below=box1, height=0.315]{Box 4}
+
+Text goes here.
+
+
+
+\end{posterbox}
+
+
+
+
+
+% =================================
+% Results
+% =================================
+\begin{posterbox}[name=box5,span=2,column=0,below=box2, height=0.5411]{Box 5}
+
+Text goes here. 
+
+
+\end{posterbox}
+
+
+
+
+
+% =================================
+% Conclusions
+% =================================
+\begin{posterbox}[name=box6,column=2,below=box4, height=0.282]{Box 6}
+
+Text goes here.
+
+\vspace{-1.5ex}
+\begin{center}
+\setlength{\tabcolsep}{18pt}
+\captionof{table}{\textcolor{aaublue4}{Table caption goes here.}}
+\begin{tabular}{ccc}
+\hline
+X  & Y & Z \\
+\hline
+3.14159 & 3.14159 & 3.14159 \\
+3.14159 & 3.14159 & 3.14159 \\
+3.14159 & 3.14159 & 3.14159 \\
+3.14159 & 3.14159 & 3.14159 \\
+3.14159 & 3.14159 & 3.14159 \\
+\hline
+\end{tabular}
+\label{table:tablelab}
+\end{center}
+
+
+\end{posterbox}
+
+
+
+
+% =================================
+% References
+\begin{posterbox}[name=refs,column=2,below=box6, height=0.158]{References}
+\vspace{-0.3em}
+\bibliographystyle{plain}
+
+\begin{thebibliography}{1}  % Simple bibliography with widest label of 1
+
+\itemsep=-0.35em  % Save space between the separation
+%\setlength{\baselineskip}{0.4em}% Save space with longer lines
+\scriptsize
+\bibitem{} J.~Doe et al,. Journal name, Volume, Number, Pages, Year.
+\bibitem{} J.~Doe et al,. Journal name, Volume, Number, Pages, Year.
+\bibitem{} J.~Doe et al,. Journal name, Volume, Number, Pages, Year.
+\end{thebibliography}
+
+\end{posterbox}
+
+
+
+
+
+% =================================
+% Contact
+\begin{posterbox}[name=contact,column=2,below=refs, height=0.079]{Contact}
+
+\vspace{0.1em}
+\textbf{Daniel Hellfeld} \\[0.2em]
+\scriptsize{
+\emph{Ph.D.\,Student} | UC Berkeley | Nuclear Engineering Department \\
+\emph{Graduate Research Fellow} | Nuclear Science and Security Consortium \\
+Tel: 1.949.680.9345 \\
+Email: dhellfeld@berkeley.edu | dhellfeld@lbl.gov \\
+Web: dhellfeld.github.io | linkedin.com/in/dhellfeld
+}\par
+\end{posterbox}
+
+
+
+
+
+% =================================
+% Acknowledgements
+\begin{posterbox}[name=ack,column=1,span=2,below=box5, above=bottom, headerColorOne=aaublue3, borderColor=aaublue3, boxColorOne=aaublue3, boxheaderheight=-1em]{}
+
+\scriptsize{
+\emph{Acknowledgement statement goes here.}
+}\par
+\end{posterbox}
+
+
+
+
+% =================================
+% Conference title, date
+\begin{posterbox}[name=titledate,column=0,span=1,below=box5, above=bottom, headerColorOne=aaublue3, borderColor=aaublue3, boxColorOne=aaublue3, boxheaderheight=-1em]{}
+
+\begin{center}
+\textbf{Conference Name - Location} \\
+Dates
+\end{center}
+
+\end{posterbox}
+
+
+
+\end{poster}
+\end{document}
