@@ -1,0 +1,58 @@
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.0in,bmargin=1.0in,lmargin=0.5in,rmargin=0.5in}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amssymb}
+\usepackage{enumerate}
+\usepackage{listings}
+
+% Header style
+\pagestyle{fancy}
+
+\setlength{\headheight}{15pt}
+
+% Command for use \textsc quickly
+\newcommand{\noun}[1]{\textsc{#1}}
+
+% Numbering
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+% Hyperref
+\usepackage{caption}
+\captionsetup{labelfont=bf,indention=0cm}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks,
+citecolor=blue,
+filecolor=blue,
+linkcolor=blue,
+urlcolor=blue
+}
+
+% Some adjustments
+\geometry{letterpaper}
+\renewcommand{\ps@plain}{\pagestyle{fancy}}
+
+% Table of contents
+\makeatother
+\usepackage{babel}
+\addto\captionsenglish{\renewcommand{\contentsname}{Contents \vspace{-2ex}}}
+\newcommand{\toc}{
+\rule[0.5ex]{1\columnwidth}{0.5pt}
+\vspace{-20pt}
+\tableofcontents{}
+\vspace{10pt}
+\rule[0.5ex]{1\columnwidth}{0.5pt}
+\newpage{}
+}
+
+% Section formats
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\bfseries}
+
+% No indents
+\setlength\parindent{0pt}

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# BibTeX engine to use with build directory LaTeX engine
+# D. Hellfeld
+# 1/24/17
+
+# Get .tex file name and trim the extension 
+fName=$1
+fName=${fName:0:${#fName} - 4}
+
+# Give it to BibTex with .aux extension
+bibtex build/"$fName.aux"
+

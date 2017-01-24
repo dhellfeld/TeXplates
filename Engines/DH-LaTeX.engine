@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# LaTeX engine to make build directory for annoying LaTex compilation files
+# Will move the output PDF file back into the main directory
+# D. Hellfeld
+# 1/24/17
+
+# Name of the build directory
+DIRECTORY=build
+
+# Check if it exists, if not, create it
+if [ ! -d "$DIRECTORY" ]; then
+  mkdir $DIRECTORY
+fi
+
+# Compile LaTeX
+pdflatex --file-line-error --synctex=1 --output-dir=$DIRECTORY "$1"
+
+# Move pdf file from build directory
+mv build/*.pdf ./
+
+
