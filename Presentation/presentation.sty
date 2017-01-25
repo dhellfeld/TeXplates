@@ -1,0 +1,83 @@
+% Packages
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{decorations.fractals}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage[mathcal]{euscript}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{epsfig}
+\usepackage{amsmath}
+%\usepackage[font=footnotesize,labelfont=bf,labelsep=period]{caption}
+
+% Beamer Layout
+\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{default}
+\usefonttheme{serif}
+\usepackage{palatino}
+\usepackage{tabu}
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamerfont{frametitle}{shape=\scshape}
+\setbeamertemplate{frametitle}{\color{black}\bfseries\insertframetitle\par\vskip-6pt\hrulefill}
+\setbeamerfont{caption}{size=\tiny}
+
+% Links
+\usepackage{hyperref}
+\definecolor{links}{HTML}{003262}
+\hypersetup{colorlinks,linkcolor=,urlcolor=links}
+
+% Colors
+\usepackage{color}
+\usepackage{xcolor}
+\definecolor{lightblue}{RGB}{65,120,225}
+\definecolor{mediumblue}{RGB}{0,0,205}
+\definecolor{darkblue}{RGB}{0,0,120}
+\definecolor{berkeleyblue}{HTML}{003262}
+\definecolor{berkeleygold}{HTML}{FDB515}
+
+% Set colors
+\setbeamercolor*{lower separation line head}{bg=black}
+\setbeamercolor*{normal text}{fg=black,bg=white}
+\setbeamercolor*{alerted text}{fg=black}
+\setbeamercolor*{example text}{fg=black}
+\setbeamercolor*{structure}{fg=black}
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10}
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10}
+
+% Margins
+\usepackage{changepage}
+
+% Footnote size
+\setbeamerfont{footnote}{size=\tiny}
+
+% Set some more parameters. including color
+\mode<presentation>
+{
+  \usetheme{Boadilla}      % or try Darmstadt, Madrid, Warsaw, Boadilla
+  %\usecolortheme{dove} % or try albatross, beaver, crane
+  \setbeamercolor{structure}{fg=black,bg=white}
+  \setbeamercolor{palette primary}{bg=berkeleyblue, fg=white} % {bg=mediumblue, fg=white}
+  \setbeamercolor{palette secondary}{bg=berkeleygold, fg=black} % {bg=lightblue, fg=white}
+  \setbeamercolor{palette tertiary}{bg=berkeleyblue, fg=white} % {bg=darkblue, fg=white}
+  \usefonttheme{serif}
+  \useinnertheme{circles}
+  \setbeamertemplate{navigation symbols}{}
+  \setbeamertemplate{caption}[numbered]
+
+  \usebackgroundtemplate{}
+}
+
+\renewcommand{\(}{\begin{columns}}
+\renewcommand{\)}{\end{columns}}
+\newcommand{\<}[1]{\begin{column}{#1}}
+\renewcommand{\>}{\end{column}}
+
+
+%% Adding slide numbers
+%\addtobeamertemplate{navigation symbols}{}{%
+%    \usebeamerfont{footline}%
+%    \usebeamercolor[fg]{footline}%
+%    \hspace{1em}%
+%    \insertframenumber/\inserttotalframenumber
+%}

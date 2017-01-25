@@ -1,0 +1,86 @@
+\documentclass[xcolor=x11names,compress]{beamer}
+\usepackage{presentation}
+
+% Title and authors
+\title[Short title]{Title}
+\subtitle{With a subtitle}
+\author{D.~Hellfeld}
+\institute[Affiliation]{Affiliation \\ Department}
+\date{\today}
+
+\begin{document}
+
+% ===================================
+% Title slide
+\begin{frame}
+\maketitle
+\end{frame}
+
+
+% ===================================
+% Title
+\begin{frame}{Title}
+
+\begin{itemize}
+	\item Text
+	\item Text
+	\item Footnote citation\footnote{J.~Doe, Journal Name, Volume, Number, Pages, Year.} or use a References slide.
+\end{itemize}
+
+\end{frame}
+
+
+% ===================================
+% Title
+\begin{frame}{Title}
+
+\begin{itemize}
+	\item Text
+	\item Text
+\end{itemize}
+
+Here is an equation
+%
+\begin{equation}
+0! = 1
+\end{equation}
+
+\begin{figure}
+\begin{tabular}{ccc}
+\includegraphics[height=1in]{Figures/Placeholder.png} &
+\includegraphics[height=1in]{Figures/Placeholder.png} &
+\includegraphics[height=1in]{Figures/Placeholder.png} \\
+\footnotesize{Text} & \footnotesize{Text} & \footnotesize{Text}
+\end{tabular}
+\end{figure}
+
+\end{frame}
+
+
+% ===================================
+% Questions
+\begin{frame}[plain,c]
+
+\begin{center}
+Questions?
+\end{center}
+
+\end{frame}
+
+
+% ===================================
+% References
+\begin{frame}{References}    
+  \begin{thebibliography}{10}    
+  \footnotesize
+  \setbeamertemplate{bibliography item}[text]
+   \bibitem{cite1}{J.~Doe, Journal Name, Volume, Number, Pages, Year.}
+   \bibitem{cite2}{J.~Doe, Journal Name, Volume, Number, Pages, Year.}
+   \bibitem{cite3}{J.~Doe, Journal Name, Volume, Number, Pages, Year.}
+  \end{thebibliography}
+\end{frame}
+
+
+
+
+\end{document}
