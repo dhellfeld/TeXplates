@@ -1,5 +1,4 @@
 \documentclass[a0paper,portrait]{baposter}
-
 \usepackage[english]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{caption}
@@ -9,7 +8,24 @@
 \usepackage{wrapfig}
 \usepackage{multirow}
 
-% =================================
+% Set up information
+\newcommand{\me}{D.~Hellfeld}
+\newcommand{\fullme}{Daniel Hellfeld}
+\newcommand{\affiliation}{University of California, Berkeley}
+\newcommand{\department}{Nuclear Engineering}
+\newcommand{\affiliationlocation}{Berkeley, CA 94720 USA}
+\newcommand{\postertitle}{Title goes here}
+\newcommand{\positionA}{Position 1}
+\newcommand{\employerA}{Employer | Department}
+\newcommand{\positionB}{Position 2}
+\newcommand{\employerB}{Employer | Department}
+\newcommand{\phone}{1.\#\#\#.\#\#\#.\#\#\#\# }
+\newcommand{\emails}{email1 | email2}
+\newcommand{\websites}{website1 | website2}
+\newcommand{\conferencename}{Conference name}
+\newcommand{\conferencelocation}{Location}
+\newcommand{\conferencedates}{Date(s)}
+
 % Colors
 \selectcolormodel{RGB}
 \definecolor{aaublue1}{RGB}{176,196,222}    % light blue
@@ -18,8 +34,7 @@
 \definecolor{aaublue4}{RGB}{10,80,10}
 \definecolor{darkblue}{RGB}{0,0,150}
 
-% =================================
-% Misc
+% Table and Figure set up
 \addto{\captionsenglish}{
   \renewcommand{\refname}{\vspace{-0.7em}}  %remove the title of the bibliograhpy
   \renewcommand{\figurename}{\textcolor{aaublue4}{Fig.}}  %change Figure to Fig. in figure captions
@@ -78,13 +93,13 @@
 }
 % Title, authors, institutions
 {
-\bf\LARGE{Title goes here}
+\bf\LARGE{\postertitle}
 }
 %
 {\vspace{0.6em}
-  \large{D. Hellfeld\textsuperscript{1}, J. Doe\textsuperscript{2}} \\[0.4em]
+  \large{\me\textsuperscript{1}, J.~Doe\textsuperscript{2}} \\[0.4em]
 
-  \small{\textsuperscript{1}Affiliation, City, State Zip Country \\[-0.2em]
+  \small{\textsuperscript{1} Department of \department, \affiliation, \affiliationlocation \\[-0.2em]
              \textsuperscript{2}Affiliation, City, State Zip Country \\[-0.2em]}
 }
 % Logos (right)
@@ -179,10 +194,9 @@ Text goes here [1].
 
 % =================================
 % Box 4
-% =================================
 \begin{posterbox}[name=box4,column=2,below=box1, height=0.315]{Box 4}
 
-Text goes here.
+Text goes here. \textcolor{darkblue}{Here is some blue text.}
 
 
 
@@ -193,8 +207,7 @@ Text goes here.
 
 
 % =================================
-% Results
-% =================================
+% Box 5
 \begin{posterbox}[name=box5,span=2,column=0,below=box2, height=0.5411]{Box 5}
 
 Text goes here. 
@@ -208,7 +221,6 @@ Text goes here.
 
 % =================================
 % Conclusions
-% =================================
 \begin{posterbox}[name=box6,column=2,below=box4, height=0.282]{Box 6}
 
 Text goes here.
@@ -243,7 +255,7 @@ X  & Y & Z \\
 \vspace{-0.3em}
 \bibliographystyle{plain}
 
-\begin{thebibliography}{1}  % Simple bibliography with widest label of 1
+\begin{thebibliography}{1} 
 
 \itemsep=-0.35em  % Save space between the separation
 %\setlength{\baselineskip}{0.4em}% Save space with longer lines
@@ -264,13 +276,13 @@ X  & Y & Z \\
 \begin{posterbox}[name=contact,column=2,below=refs, height=0.079]{Contact}
 
 \vspace{0.1em}
-\textbf{Daniel Hellfeld} \\[0.2em]
+\textbf{\fullme} \\[0.2em]
 \scriptsize{
-\emph{Position 1} | Employer | Department \\
-\emph{Position 2} | Employer | Department \\
-Tel: 1.\#\#\#.\#\#\#.\#\#\#\# \\
-Email: email1 | email2\\
-Web: website1 | website2
+\emph{\positionA} | \employerA \\
+\emph{\positionB} | \employerB \\
+Tel: \phone \\
+Email: \emails \\
+Web: \websites
 }\par
 \end{posterbox}
 
@@ -295,8 +307,8 @@ Web: website1 | website2
 \begin{posterbox}[name=titledate,column=0,span=1,below=box5, above=bottom, headerColorOne=aaublue3, borderColor=aaublue3, boxColorOne=aaublue3, boxheaderheight=-1em]{}
 
 \begin{center}
-\textbf{Conference Name - Location} \\
-Dates
+\textbf{\conferencename - \conferencelocation} \\
+\conferencedates
 \end{center}
 
 \end{posterbox}
