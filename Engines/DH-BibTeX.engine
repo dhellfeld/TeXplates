@@ -10,4 +10,3 @@ fName=${fName:0:${#fName} - 4}
 
 # Give it to BibTex with .aux extension
 bibtex build/"$fName.aux"
-
