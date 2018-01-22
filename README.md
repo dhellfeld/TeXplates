@@ -7,5 +7,6 @@ Various LaTeX templates
 * Poster
 * Presentation
 * Cover letter
+* UC Berkeley Thesis
 
 Also included are LaTeX engines for TeXShop that I use to make the LaTeX compilation a little cleaner. These are placed in ~/Library/TeXShop/Engines/
