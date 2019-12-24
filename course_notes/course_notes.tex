@@ -1,0 +1,61 @@
+\documentclass[english, 10pt]{article}
+\usepackage{style/course_notes}
+
+% Set up some info on course
+\newcommand{\coursecode}{Course Code}
+\newcommand{\coursename}{Course Name}
+\newcommand{\professor}{Professor Name}
+\newcommand{\me}{J.~Doe}
+\newcommand{\term}{Term and Year}
+\newcommand{\department}{Department}
+\newcommand{\university}{University}
+
+% Headers
+\chead{\coursecode\,\,Course Notes}
+\lhead{\university, \term}
+\rhead{\me}
+
+% Font matter
+\newcommand{\notefront} {
+\pagenumbering{roman}
+\begin{center}
+	\textbf{\Large{\noun{\coursecode}}}\\ \vspace{1ex}
+	{\large{\noun{\coursename}}}\\ \vspace{1ex}
+	{\noun \professor} \\  {\noun {\university}} $\bullet$ \ {\noun {\department}} $\bullet$ \ {\noun {\term}} \\ \vspace{2ex}
+\end{center}
+}
+
+% Begin Document
+\begin{document}
+% Notes front
+\notefront
+% Table of Contents and List of Figures
+\toc
+% Page numbering
+\pagenumbering{arabic}
+
+
+% ================
+% Section title
+\section{Section title}
+
+\begin{itemize} \setlength\itemsep{-0.2em}
+	\item
+	\item
+\end{itemize}
+
+% --------------------------
+% Subsection title
+\subsection{Subsection title}
+
+\begin{itemize} \setlength\itemsep{-0.2em}
+	\item
+	\item
+\end{itemize}
+
+
+
+
+
+
+\end{document}

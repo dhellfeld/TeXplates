@@ -1,0 +1,72 @@
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=0.9in,bmargin=0.9in,lmargin=0.9in,rmargin=0.9in}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\usepackage[english]{babel}
+\usepackage{indentfirst}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{enumitem}
+\usepackage{lipsum}
+\setlength{\bibsep}{0pt}
+
+% Use "todonotes" - ability to add comments in the margins
+\usepackage{todonotes}
+
+% Set up hyperlinks
+\usepackage[colorlinks=true, citecolor=Blue, linkcolor=Blue, urlcolor=Blue]{hyperref}
+% example usage --> \todo[author=DH, linecolor=blue!40, backgroundcolor=green!20!white, bordercolor=black, size=\small]{This is a comment}
+
+% Set up section\subsection title formats
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+\titleformat*{\section}{\normalsize\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+
+% Footnote
+\def\@xfootnote[#1]{\protected@xdef\@thefnmark{#1}\@footnotemark\@footnotetext}
+
+% Front matter
+\newcommand{\frontmatter}{
+\begin{centering}
+\textbf{\papertitle} \\[10pt]
+\me \textsuperscript{1,}\footnote[*]{Email: \email} \\[5pt]
+\emph{\textsuperscript{1}\department, \institution, \location} \\[10pt]
+\today \\
+\end{centering}
+}
+
+% No indenting at all
+\setlength\parindent{0pt}
+
+% Set up abstract
+\renewenvironment{abstract}{
+\small
+\begin{center}
+\vspace{10pt}
+\bfseries \abstractname \vspace{-.5em}
+\end{center}
+\list{}{
+    \setlength{\leftmargin}{0.3in}
+    \setlength{\rightmargin}{\leftmargin}
+}
+\item\relax
+}{\endlist}
+
+
+% New commands
+\newcommand{\super}[1]{$^{\textrm{#1}}$}
+\newcommand{\sub}[1]{$_{\textrm{#1}}$}

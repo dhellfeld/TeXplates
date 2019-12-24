@@ -1,0 +1,130 @@
+%% thesis.tex 2014/04/11
+%
+% Based on sample files of unknown authorship.
+%
+% The Current Maintainer of this work is Paul Vojta.
+
+\documentclass{style/ucbthesis}
+\usepackage[sorting=none, style=ieee]{biblatex}
+\usepackage{style/variables}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{diagbox}
+\usepackage{mathrsfs}
+\usepackage[version=3]{mhchem}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{varwidth}
+\usepackage{parnotes}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\usepackage{wasysym}
+\usepackage{pdflscape}
+\usepackage{multicol}
+
+% Tikz
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes,arrows,arrows.meta,snakes}
+\tikzstyle{process} = [rectangle, text centered, draw=black,thick]
+\tikzstyle{decision} = [diamond, text centered, draw=black,thick]
+\tikzstyle{arrow} = [-{Stealth[scale=1.2]},rounded corners,thick]
+
+% Captions
+\usepackage[font=small,labelfont=bf]{caption}
+\captionsetup{labelsep=period}
+
+% Fonts
+\usepackage{lettrine}% For drop caps at the start of each chapter
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+\usepackage[T1]{fontenc}
+% \renewcommand{\familydefault}{\sfdefault}
+% \usepackage{palatino}
+% \renewcommand{\rmdefault}{ppl} % rm
+% \linespread{1.05}        % Palatino needs more leading
+% % \usepackage{euler} % math
+% \normalfont
+% \usepackage[T1]{fontenc}
+
+% List of acronyms
+\usepackage[toc, acronym, nopostdot, nonumberlist, nogroupskip]{glossaries}
+\makeglossaries
+\usepackage{style/abbreviations}
+
+% Table of content depth
+\setcounter{tocdepth}{5}
+
+% Section numbering depth
+\setcounter{secnumdepth}{5}
+
+% Parnotes config
+\renewcommand*\parnoteintercmd[1]{,\,}
+
+% Figure borders
+\setlength{\fboxsep}{0pt}
+\setlength{\fboxrule}{0.25pt}
+
+% Error function
+\DeclareMathOperator\erf{erf}
+
+% To compile this file, run "latex thesis", then "biber thesis"
+% (or "bibtex thesis", if the output from latex asks for that instead),
+% and then "latex thesis" (without the quotes in each case).
+
+% Double spacing, if you want it.  Do not use for the final copy.
+% \def\dsp{\def\baselinestretch{2.0}\large\normalsize}
+% \dsp
+
+% If the Grad. Division insists that the first paragraph of a section
+% be indented (like the others), then include this line:
+% \usepackage{indentfirst}
+
+\bibliography{ref/references}
+
+\hyphenation{mar-gin-al-ia}
+\hyphenation{bra-va-do}
+
+\newcommand*{\MyPath}{.}%
+
+\begin{document}
+
+\include{frontmatter/title}
+\include{frontmatter/approval}
+\include{frontmatter/copyright}
+\include{frontmatter/abstract}
+
+\begin{frontmatter}
+	\include{frontmatter/dedication}
+	\include{frontmatter/indexing}
+	\include{frontmatter/acknowledgements}
+\end{frontmatter}
+
+%\pagestyle{headings}
+
+\include{chapters/ch1/main}
+\include{chapters/ch2/main}
+\include{chapters/ch3/main}
+\include{chapters/ch4/main}
+\include{chapters/ch5/main}
+\include{chapters/ch6/main}
+
+\begin{appendix}
+	\include{appendices/appA/main}
+	\include{appendices/appB/main}
+\end{appendix}
+
+\printbibliography
+
+\end{document}

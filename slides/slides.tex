@@ -1,0 +1,38 @@
+\documentclass[xcolor=x11names,compress,aspectratio=169]{beamer}
+\usepackage{style/slides}
+
+% Title and authors
+\title[Short title]{Title}
+\subtitle{With a subtitle}
+\author{J. Doe}
+\institute[Short Institution]{Institution \\ Department}
+\date{\today}
+
+\begin{document}
+
+% Title
+\begin{frame}
+\maketitle
+\end{frame}
+
+% Slide 1
+\begin{frame}{Title}
+\input{text/01-slide1.tex}
+\end{frame}
+
+% Slide 2
+\begin{frame}{Title}
+\input{text/02-slide2.tex}
+\end{frame}
+
+% Questions
+\begin{frame}{Questions?}
+\end{frame}
+
+% References
+\begin{frame}{References}
+\bibliographystyle{IEEEtran}
+\bibliography{ref/references}
+\end{frame}
+
+\end{document}

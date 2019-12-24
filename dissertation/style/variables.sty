@@ -1,0 +1,27 @@
+\newcommand{\thesistitle}{Title}
+\newcommand{\thesisauthor}{Jane Doe}
+\newcommand{\thesisdegreesemester}{Term}
+\newcommand{\thesisdegreeyear}{Year}
+\newcommand{\thesisdegree}{Doctor of Philosophy}
+\newcommand{\thesischair}{Professor ABC}
+\newcommand{\thesiscommittee}{Professor X \\ Professor Y \\ Professor Z}
+\newcommand{\thesiscommitteenum}{4}
+\newcommand{\thesisfield}{Field}
+\newcommand{\thesiscampus}{Campus}
+\newcommand{\thesisuniversity}{University}
+
+% Som math symbols
+\newcommand{\boldV}{\boldsymbol{V}}
+\newcommand{\boldK}{\boldsymbol{K}}
+\newcommand{\boldC}{\boldsymbol{C}}
+\newcommand{\boldlambda}{\boldsymbol{\lambda}}
+\newcommand{\boldx}{\boldsymbol{x}}
+\newcommand{\boldy}{\boldsymbol{y}}
+
+% Labelled figure
+\newcommand{\labelledfigure}[4]{
+    \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (image) at (0,0) {#1};
+    \node[anchor=west, align=left] at (#2,#3) {#4};
+    \end{tikzpicture}
+}

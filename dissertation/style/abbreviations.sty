@@ -1,0 +1,16 @@
+% List abbreviations
+\newcommand*{\listofacronyms}{\printglossary[title=List of Abbreviations,
+                                             toctitle=List of Abbreviations,
+											 type=\acronymtype]}
+\newcommand*{\listofacronymsall}{\glsaddall \printglossary[title=List of Abbreviations,
+                                             toctitle=List of Abbreviations,
+ 											 type=\acronymtype]}
+
+% Abbreviations
+\newacronym{asap}{ASAP}{As Soon As Possible}
+
+% To use
+% \acrfull{asap} --> As Soon As Possible (ASAP)
+% \acrlong{asap} --> As Soon As Possible
+% \acrshort{asap} --> ASAP
+% Including a star (e.g., \acrshort*{asap}) will remove the link from the acronym to list

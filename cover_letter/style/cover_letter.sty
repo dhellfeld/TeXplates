@@ -1,0 +1,73 @@
+\usepackage[letterpaper]{geometry}
+\geometry{verbose,tmargin=0.8in,bmargin=1in,lmargin=1in,rmargin=1in}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption}
+\usepackage[english]{babel}
+\usepackage{indentfirst}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{arydshln}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xfrac}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{enumitem}
+\setlength{\bibsep}{0pt}
+\usepackage{hyperref}
+\usepackage{lipsum}
+
+% No indenting at all
+\setlength\parindent{0pt}
+
+\pagestyle{empty}
+
+
+% FROM header
+\newcommand{\FROM}{
+\textbf{\large{\myname}} \\[-7pt]
+\rule{\textwidth}{0.5pt}
+\myaddressone, \myaddresstwo, \mycity, \mystate~\myzipcode \\
+\myphone~$|$~\href{mailto:\myemailone}{\myemailone}~$|$~\href{mailto:\myemailtwo}{\myemailtwo}~$|$~\href{https://\mywebsiteone/}{\mywebsiteone}~$|$~\href{https://\mywebsitetwo/}{\mywebsitetwo}
+}
+
+%% FROM header
+%\newcommand{\FROM}{
+%\textbf{\myname} \\[-7pt]
+%\rule{\textwidth}{0.5pt}
+%\myaddressone \hfill \myphone \\
+%\myaddresstwo \hfill \href{mailto:\myemailone}{\myemailone} $|$ \href{mailto:\myemailtwo}{\myemailtwo} \\
+%\mycity, \mystate \myzipcode \hfill \href{https://\mywebsitetwo/}{\mywebsitetwo} $|$ \href{https://\mywebsitetwo/}{\mywebsitetwo}
+%}
+
+% TO
+\newcommand{\TO}{
+\toprefix~\tofirstname~\tolastname \\
+\tocompany \\
+\toaddress \\
+\tolocation \\
+
+\todaysdate \\
+
+\greeting~\toprefix~\tolastname,\\
+}
+
+
+% Salutation and signature
+\newcommand{\salutationsignature}{
+\salutation, \vspace{-2pt}
+
+\begin{figure}[H]
+\includegraphics[width=0.3\textwidth]{\signaturefile}
+\end{figure}
+
+\vspace{-5pt}
+\myname
+}

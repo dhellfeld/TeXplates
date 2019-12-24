@@ -1,0 +1,170 @@
+\documentclass[a0paper,portrait]{style/baposter}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{caption}
+\captionsetup{font=small, labelfont=bf}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{lipsum}
+
+% Set up information
+\newcommand{\me}{J. Doe}
+\newcommand{\fullme}{Jane Doe}
+\newcommand{\affiliation}{Institution}
+\newcommand{\department}{Department}
+\newcommand{\affiliationlocation}{City, State, Zipcode, Country}
+\newcommand{\postertitle}{Title}
+\newcommand{\position}{Position title}
+\newcommand{\employer}{Employer | Department}
+\newcommand{\phone}{\#.\#\#\#.\#\#\#.\#\#\#\# }
+\newcommand{\emails}{email1 | email2}
+\newcommand{\websites}{website1 | website2}
+\newcommand{\conferencename}{Conference name }
+\newcommand{\conferencelocation}{Location}
+\newcommand{\conferencedates}{Date(s)}
+
+% Colors
+\selectcolormodel{RGB}
+\definecolor{aaublue1}{RGB}{176,196,222}    % light blue
+\definecolor{aaublue2}{RGB}{110,110,140}    % darker blue
+\definecolor{aaublue3}{RGB}{240,240,240}
+\definecolor{aaublue4}{RGB}{10,80,10}
+\definecolor{darkblue}{RGB}{0,0,150}
+
+% Table and Figure set up
+\addto{\captionsenglish}{
+  \renewcommand{\refname}{\vspace{-0.7em}}  %remove the title of the bibliograhpy
+  \renewcommand{\figurename}{\textcolor{aaublue4}{Fig.}}  %change Figure to Fig. in figure captions
+  \renewcommand{\tablename}{\textcolor{aaublue4}{Table}}  %change Figure to Fig. in figure captions
+  \renewcommand{\thetable}{\textcolor{aaublue4}{\Roman{table}}}
+  \renewcommand{\thefigure}{\textcolor{aaublue4}{\arabic{figure}}}
+  \captionsetup[table]{labelfont=footnotesize, font=footnotesize,  labelsep=period, singlelinecheck=true}
+  \captionsetup[figure]{labelfont=footnotesize, font=footnotesize, labelsep=period, singlelinecheck=true}
+}
+
+
+% Reduce space before and after equations
+%\addtolength{\abovedisplayskip}{-2mm}
+%\addtolength{\belowdisplayskip}{-2mm}
+
+
+\begin{document}
+
+% Set the background of the poster
+\background{
+	\begin{tikzpicture}[remember picture,overlay]
+        \fill[fill=aaublue3] (current page.north west) rectangle (current page.south east);
+        \fill [fill=aaublue1] (current page.north west) rectangle ([yshift=-\headerheight] current page.north east);
+	\end{tikzpicture}
+}
+
+
+% General poster setup
+\begin{poster}{
+  grid=false,
+  columns=3,
+  colspacing=4mm,
+  headerheight=0.1\textheight,
+  background=user,
+  eyecatcher=true,
+  headerborder=closed,
+  borderColor=aaublue2,
+  headershape=rounded,
+  headershade=plain,
+  headerColorOne=aaublue1,
+  textborder= rounded,
+  boxshade=plain,
+  boxColorOne=white,
+  headerFontColor=black,
+  headerfont=\Large\sf\bf,
+  linewidth=1pt
+}
+% Logos (left)
+{
+  \begin{tabular}{c}
+  \includegraphics[height=0.4\headerheight]{fig/placeholder.pdf} \\
+  \includegraphics[height=0.4\headerheight]{fig/placeholder.pdf}
+  \end{tabular}
+}
+% Title, authors, institutions
+{
+\bf\LARGE{\postertitle}
+}
+%
+{\vspace{0.6em}
+  \large{\me\textsuperscript{1}, J.~Doe\textsuperscript{2}} \\[0.4em]
+
+  \small{\textsuperscript{1} \department, \affiliation, \affiliationlocation \\[-0.2em]
+         \textsuperscript{2} Department, Institution, City, State Zip Country \\[-0.2em]}
+}
+% Logos (right)
+{
+  \begin{tabular}{c}
+  \includegraphics[height=0.4\headerheight]{fig/placeholder.pdf} \\
+  \includegraphics[height=0.4\headerheight]{fig/placeholder.pdf}
+  \end{tabular}
+}
+
+
+% Border line
+\begin{posterbox}[name=blah, column=0, span=3, headerColorOne=aaublue3, borderColor=aaublue3, boxColorOne=aaublue3, boxheaderheight=-1em]{}
+\vspace{-2.5ex}
+\textcolor{aaublue2}{\noindent\makebox[\linewidth]{\rule{60cm}{1pt}}}
+\end{posterbox}
+
+% Box 1
+\begin{posterbox}[name=box1, column=0, row=0, span=3, height=0.097]{Box 1}
+\input{text/01-box1.tex}
+\end{posterbox}
+
+% Box 2
+\begin{posterbox}[name=box2, column=0, below=box1, height=0.315]{Box 2}
+\input{text/02-box2.tex}
+\end{posterbox}
+
+% Box 3
+\begin{posterbox}[name=box3, column=1, below=box1, height=0.315]{Box 3}
+\input{text/03-box3.tex}
+\end{posterbox}
+
+% Box 4
+\begin{posterbox}[name=box4, column=2, below=box1, height=0.315]{Box 4}
+\input{text/04-box4.tex}
+\end{posterbox}
+
+% Box 5
+\begin{posterbox}[name=box5, span=2, column=0, below=box2, height=0.5411]{Box 5}
+\input{text/05-box5.tex}
+\end{posterbox}
+
+% Box 6
+\begin{posterbox}[name=box6, column=2, below=box4, height=0.282]{Box 6}
+\input{text/06-box6.tex}
+\end{posterbox}
+
+% References
+\begin{posterbox}[name=refs, column=2, below=box6, height=0.158]{References}
+\input{text/07-references.tex}
+\end{posterbox}
+
+% Contact
+\begin{posterbox}[name=contact, column=2, below=refs, height=0.079]{Contact}
+\input{text/08-contact.tex}
+\end{posterbox}
+
+% Acknowledgements
+\begin{posterbox}[name=ack, column=1, span=2, below=box5, above=bottom, headerColorOne=aaublue3, borderColor=aaublue3, boxColorOne=aaublue3, boxheaderheight=-1em]{}
+\input{text/09-acknowledgements.tex}
+\end{posterbox}
+
+% Conference title, date
+\begin{posterbox}[name=eventinfo, column=0, span=1,below=box5, above=bottom, headerColorOne=aaublue3, borderColor=aaublue3, boxColorOne=aaublue3, boxheaderheight=-1em]{}
+\input{text/10-eventinfo.tex}
+\end{posterbox}
+
+\end{poster}
+\end{document}

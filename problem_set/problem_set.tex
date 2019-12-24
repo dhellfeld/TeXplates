@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage{style/problem_set}
+
+% Set up info
+\newcommand{\me}{J.~Doe}
+\newcommand{\coursenumber}{Course Number}
+\newcommand{\assignmentnumber}{\#}
+\newcommand{\university}{University}
+\newcommand{\department}{Department}
+\newcommand{\email}{email@email.edu}
+
+% Toggle solutions on/off
+\togglefalse{solutions} %\toggletrue
+
+% Set up header
+\setupheader
+
+% =====================================
+\begin{document}
+
+% Front matter
+\frontmatter
+
+
+% =====================================
+\problem{1}
+
+Here is an equation
+%
+\begin{equation}
+0! = 1
+\end{equation}
+
+
+
+% =====================================
+\problem{2}
+
+Below is a figure.
+
+\begin{figure}[H]
+\hypertarget{fig1}{}
+\centering
+\includegraphics[width=0.5\columnwidth]{fig/placeholder.pdf}
+\caption{Figure caption goes here.}
+\end{figure}
+
+
+\end{document}

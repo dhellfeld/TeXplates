@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage{style/paper}
+
+% Define
+\newcommand{\me}{Firstname Lastname}
+\newcommand{\papertitle}{Title of Article}
+\newcommand{\institution}{Institution Name}
+\newcommand{\location}{City, State Zipcode}
+\newcommand{\department}{Department}
+\newcommand{\email}{email}
+
+% Begin
+\begin{document}
+
+% Front matter
+\frontmatter
+
+% Content
+\input{text/00-abstract.tex}
+\input{text/01-section1.tex}
+\input{text/02-section2.tex}
+
+% References
+\bibliographystyle{IEEEtran}
+\bibliography{ref/references}
+
+% End
+\end{document}
